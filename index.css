@@ -1,0 +1,155 @@
+:root {
+  --assasins-creed-red: #d30c14;
+}
+
+@font-face {
+  font-family: "Assasin Creed";
+  src: url("fonts/Assassin$.ttf");
+}
+
+body {
+  margin: 0 0;
+  background-image: url("img/shadow_bg.png");
+  background-position: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  width: 100dvw;
+  height: 100dvh;
+}
+
+.middle_content {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.backgroundVideo {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+#container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  opacity: 0.8;
+  gap: 0.5rem;
+}
+
+.logo {
+  z-index: 0;
+}
+.subLogo {
+  z-index: -1;
+  color: var(--assasins-creed-red);
+}
+
+#countdown {
+  position: relative;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  font-family: Hitmarker;
+  background-image: url("img/backgroundtile.webp");
+  border: var(--assasins-creed-red) solid 0.1rem;
+}
+.number {
+  border: var(--assasins-creed-red) solid 0.1rem;
+}
+.subNumber {
+  border: var(--assasins-creed-red) solid 0.1rem;
+}
+
+.countdownFinished {
+  color: var(--assasins-creed-red);
+}
+
+.importantInfo {
+  z-index: 2;
+  position: absolute;
+  bottom: 1%;
+  overflow: hidden;
+  font-family: Calibri, sans-serif;
+  font-size: 0.8rem;
+  text-align: center;
+  opacity: 0.5;
+}
+.importantInfo a {
+  text-decoration: none;
+  color: aqua;
+}
+.importantInfo a:hover {
+  color: aquamarine;
+}
+
+#canvas {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* For mobile */
+.logo {
+  width: 95vw;
+  height: auto;
+}
+.subLogo {
+  font-size: 1.8rem;
+  line-height: 35px;
+}
+.number {
+  font-size: 32px;
+}
+.subNumber {
+  font-size: 12.5px;
+}
+.countdownFinished {
+  font-size: 64px;
+}
+
+/* For desktop */
+@media only screen and (min-width: 768px) {
+  .background {
+    background-image: none;
+  }
+  .title {
+    margin-bottom: 15px;
+  }
+  .logo {
+    width: auto;
+    height: auto;
+  }
+  .subLogo {
+    font-size: 78px;
+    line-height: 70px;
+  }
+  .number {
+    font-size: 64px;
+  }
+  .subNumber {
+    font-size: 25px;
+  }
+  .countdownFinished {
+    font-size: 128px;
+  }
+}
